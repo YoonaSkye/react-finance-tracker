@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
+// import firebase/auth has some bug with webpack, but is fine to run
 
 const firebaseConfig = {
   apiKey: "AIzaSyDT73YOxrfar9hCVDLvCGv6jKatc83CVQE",
