@@ -14,7 +14,7 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <ul>
         <li className={styles.title}>
-          <Link to="/">Finace Tracker</Link>
+          <Link to="/">Finance Tracker</Link>
         </li>
         {!user && (
           <>
