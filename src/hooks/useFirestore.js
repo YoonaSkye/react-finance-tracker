@@ -5,7 +5,7 @@ let initialState = {
   document: null,
   isPending: false,
   error: null,
-  success: null,
+  success: false,
 };
 
 const firestoreReudcer = (state, action) => {
