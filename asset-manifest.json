@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-finance-tracker/static/css/main.9b9c92cf.css",
+    "main.js": "/react-finance-tracker/static/js/main.a55427ae.js",
+    "index.html": "/react-finance-tracker/index.html",
+    "main.9b9c92cf.css.map": "/react-finance-tracker/static/css/main.9b9c92cf.css.map",
+    "main.a55427ae.js.map": "/react-finance-tracker/static/js/main.a55427ae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b9c92cf.css",
+    "static/js/main.a55427ae.js"
+  ]
+}
