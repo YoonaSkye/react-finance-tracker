@@ -24,6 +24,13 @@ const firestoreReudcer = (state, action) => {
         error: null,
         success: true,
       };
+    case "DELETED_DOCUMENT":
+      return {
+        document: null,
+        isPending: false,
+        error: null,
+        success: true,
+      };
     case "ERROR":
       return {
         document: null,
@@ -67,7 +74,18 @@ export const useFirestore = (collection) => {
   };
 
   // delete a document
-  const deleteDocument = async (id) => {};
+  const deleteDocument = async (id) => {
+    dispatch({ type: "IS_PENDING" });
+
+    try {
+      await ref.doc(id).delete();
+      dispatchIfNotCancelled({
+        type: "DELETED_DOCUMENT",
+      });
+    } catch (err) {
+      dispatchIfNotCancelled({ type: "ERROR", payload: "could not delete" });
+    }
+  };
 
   useEffect(() => {
     return () => setIsCancelled(true);
